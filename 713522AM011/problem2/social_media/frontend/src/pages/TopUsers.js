@@ -11,7 +11,6 @@ const TopUsers = () => {
         };
         fetchTopUsers();
     }, []);
-
     return (
         <div>
             <h2>Top Users</h2>
@@ -23,5 +22,4 @@ const TopUsers = () => {
         </div>
     );
 };
-
 export default TopUsers;

@@ -3,7 +3,6 @@ import axios from 'axios';
 
 const Posts = ({ type }) => {
     const [posts, setPosts] = useState([]);
-
     useEffect(() => {
         const fetchPosts = async () => {
             const response = await axios.get(`http://localhost:8000/api/posts/?type=${type}`);
@@ -11,7 +10,6 @@ const Posts = ({ type }) => {
         };
         fetchPosts();
     }, [type]);
-
     return (
         <div>
             <h2>{type === 'popular' ? 'Popular Posts' : 'Latest Posts'}</h2>
@@ -23,5 +21,4 @@ const Posts = ({ type }) => {
         </div>
     );
 };
-
 export default Posts;

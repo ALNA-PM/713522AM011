@@ -3,11 +3,9 @@ import { getFeed } from "../api";
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
-
   useEffect(() => {
     getFeed().then(setPosts);
   }, []);
-
   return (
     <div className="p-5">
       <h1 className="text-2xl font-bold">Live Feed</h1>
@@ -19,5 +17,4 @@ const Feed = () => {
     </div>
   );
 };
-
 export default Feed;
