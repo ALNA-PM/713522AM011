@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import TopUsersView, PostsView
+from .views import TopUsersView, TrendingPostsView, LatestPostsView
 
 urlpatterns = [
     path("users/", TopUsersView.as_view(), name='top_users'),
-    path("posts/", PostsView.as_view(), name='posts'),
+    path("posts/", TrendingPostsView.as_view(), name='trending_posts'),
+    path("posts/latest/", LatestPostsView.as_view(), name='latest_posts'),
 ]
